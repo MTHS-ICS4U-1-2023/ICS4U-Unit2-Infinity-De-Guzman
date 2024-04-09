@@ -3,7 +3,7 @@
  * version  1.0
  * since    2024-04-03
  */
-class InfinStack {
+export class InfinStack {
     // variables
     constructor() {
         self.stackAsList = []
@@ -24,6 +24,4 @@ class InfinStack {
         return values
     }
 }
-
-export default InfinStack
 
