@@ -16,12 +16,12 @@ export class InfinStack {
 
     // This function prints out the object
     showStack() {
-        let values = ""
+        let stackValues = ""
         for (let counter = 0; counter < self.stackAsList.length; counter++) {
-            values = values + self.stackAsList[counter] + ", "
+            stackValues = stackValues + self.stackAsList[counter] + ", "
         }
-        values = values.substring(0, values.length-2)
-        return values
+        stackValues = stackValues.substring(0, stackValues.length-2)
+        return stackValues
     }
 }
 
