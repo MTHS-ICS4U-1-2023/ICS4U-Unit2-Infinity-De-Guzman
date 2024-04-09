@@ -9,7 +9,9 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "eslint": "^8.57.0",
+    "@inquirer/prompts": "^4.3.2",
+    "bun-promptx": "^0.2.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-jsdoc": "^48.2.3"
   }
 }
