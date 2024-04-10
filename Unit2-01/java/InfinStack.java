@@ -11,11 +11,11 @@ import java.util.List;
 /**
  * This is the class InfinStack.
  */
-public class CurtisStack {
+public class InfinStack {
     /**
      * Declares that the instance variable is private.
      */
-        private List<String> stackAsList = new ArrayList<>();
+    private List<String> stackAsList = new ArrayList<>();
 
     /**
      * The push method.
@@ -27,7 +27,7 @@ public class CurtisStack {
     }
 
     /**
-     * showStack.
+     * The showStack method.
      *
      * @return the stackValues as a string
      */
@@ -39,7 +39,7 @@ public class CurtisStack {
                 stackValues += ", ";
             }
         }
-    return values;
+        return stackValues;
     }
 }
 
