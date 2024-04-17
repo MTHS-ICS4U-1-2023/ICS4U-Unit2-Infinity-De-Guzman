@@ -4,7 +4,7 @@
  * since    2024-04-03
  */
 export class InfinStack {
-  // variables
+  // constructor
   constructor() {
     this.stackAsList = []
   }
