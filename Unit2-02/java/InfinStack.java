@@ -40,7 +40,7 @@ public class InfinStack {
                 stackValues += ", ";
             }
         }
-    return stackValues;
+        return stackValues;
     }
 
     /**
