@@ -51,15 +51,15 @@ export class InfinStack {
   /*
   * pops a string from the stack
   */
-  public popItem() {
-    let popItem = ""
+  public itemPop() {
+    let itemPop = ""
     if (this.stackAsList[0]) {
-      popItem = this.stackAsList[this.stackAsList.length - 1]
+      itemPop = this.stackAsList[this.stackAsList.length - 1]
     } else {
-      popItem = "nothing to remove"
+      itemPop = "nothing to remove"
     }
     this.stackAsList.splice(-1)
-    return popItem
+    return itemPop
   }
 }
 
