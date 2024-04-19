@@ -1,15 +1,37 @@
 /**
- * author   Infinity de Guzman
- * version  1.0
- * since    2024-04-03
+ * The InfinStack Class.
+ *
+ * author  Infinity de Guzman
+ * version 1.0
+ * since   2024-05-26
  */
+
 export class InfinStack {
-  // constructor
+
+  /*
+  * The constructor for the InfinStack string stack class.
+  */
   constructor() {
     this.stackAsList = []
   }
 
-  // This method returns the stack as a string.
+  /*
+  * Checks if stack is empty.
+  */
+  public get empty() {
+    return this.stackAsList.length == 0
+  }
+
+  /*
+  * returns stack size
+  */
+  public get size() {
+    return this.stackAsList.length
+  }
+  
+  /*
+  * returns the stack as a string
+  */
   public get showStack() {
     let stackValues = ""
     for (let counter = 0; counter < this.stackAsList.length; counter++) {
@@ -19,13 +41,17 @@ export class InfinStack {
     return stackValues
   }
 
-  // This method pushes a string onto the stack.
+  /*
+  * pushes a string onto the stack
+  */
   public push(input) {
     this.stackAsList.push(input)
   }
-  
-  // This method pops a string from the stack.
-  public itemPop() {
+
+  /*
+  * pops a string from the stack
+  */
+  public popItem() {
     let popItem = ""
     if (this.stackAsList[0]) {
       popItem = this.stackAsList[this.stackAsList.length - 1]
