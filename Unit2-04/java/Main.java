@@ -43,7 +43,7 @@ final class Main {
         jewels.push("sapphire");
         System.out.println(jewelsString + jewels.showStack());
         System.out.println(peakString + jewels.peak());
-        System.out.println(poppedString + jewels.popItem());
+        System.out.println(poppedString + jewels.itemPop());
         System.out.println(jewelsString + jewels.showStack());
         jewels.clear();
         System.out.println(clearingStackString);
@@ -56,15 +56,15 @@ final class Main {
         pokemon.push("wobbuffet");
         System.out.println(pokemonString + pokemon.showStack());
         System.out.println(peakString + pokemon.peak());
-        System.out.println(poppedString + pokemon.popItem());
-        System.out.println(poppedString + pokemon.popItem());
+        System.out.println(poppedString + pokemon.itemPop());
+        System.out.println(poppedString + pokemon.itemPop());
         System.out.println(peakString + pokemon.peak());
         System.out.println(pokemonString + pokemon.showStack());
         pokemon.clear();
         System.out.println(clearingStackString);
         System.out.println(peakString + pokemon.peak());
         System.out.println("");
-
+        
         final InfinStack colours = new InfinStack();
         colours.push("aquamarine");
         colours.push("indigo");
