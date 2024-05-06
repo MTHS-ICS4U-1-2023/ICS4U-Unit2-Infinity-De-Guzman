@@ -64,7 +64,7 @@ final class Main {
         System.out.println(clearingStackString);
         System.out.println(peakString + pokemon.peak());
         System.out.println("");
-        
+
         final InfinStack colours = new InfinStack();
         colours.push("aquamarine");
         colours.push("indigo");
