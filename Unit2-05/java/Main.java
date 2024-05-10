@@ -53,8 +53,8 @@ final class Main {
         System.out.println(newSpeedString + fordFocus.getSpeed());
 
         System.out.println("Changing colour to black:");
-        fordFocus.setcolour("black");
-        System.out.println(newColourString + fordFocus.getcolour());
+        fordFocus.setColour("black");
+        System.out.println(newColourString + fordFocus.getColour());
 
         System.out.println("");
 
@@ -70,13 +70,13 @@ final class Main {
         ferrari.accelerate(oneHundredConst, fourConst);
         System.out.println(newSpeedString + ferrari.getSpeed());
 
-        System.out.println("Breaking, 10 of power for 10 sec.");
+        System.out.println("Braking, 10 of power for 10 sec.");
         ferrari.brake(tenConst, tenConst);
         System.out.println(newSpeedString + ferrari.getSpeed());
 
         System.out.println(changingColourString);
-        ferrari.setcolour("racing red!");
-        System.out.println(newColourString + ferrari.getcolour());
+        ferrari.setColour("racing red!");
+        System.out.println(newColourString + ferrari.getColour());
 
         System.out.println("");
 
@@ -92,13 +92,13 @@ final class Main {
         citroenAmi.accelerate(fiveConst, tenConst);
         System.out.println(newSpeedString + citroenAmi.getSpeed());
 
-        System.out.println("Breaking, 2 of power for 10 sec.");
+        System.out.println("Braking, 2 of power for 10 sec.");
         citroenAmi.brake(2, tenConst);
         System.out.println(newSpeedString + citroenAmi.getSpeed());
 
         System.out.println(changingColourString);
-        citroenAmi.setcolour("purple");
-        System.out.println(newColourString + citroenAmi.getcolour());
+        citroenAmi.setColour("purple");
+        System.out.println(newColourString + citroenAmi.getColour());
 
         System.out.println("\nDone.");
     }
