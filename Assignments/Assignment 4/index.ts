@@ -1,47 +1,28 @@
 /**
- * The main file to prompt user input and interact with the Triangle class.
+ * The main file to print a recursive pattern.
  * By:      Infinity de Guzman
  * Version: 1.0
  * Since:   2024-05-30
  */
 
-import { createPrompt } from 'bun-promptx'
+import { createPrompt } from 'bun-promptx';
 
-function printPatternRecursively(num: number, currentRow: number = 1, currentColumn: number = 1): void {
-    if (currentRow > num) {
-        return;
-    }
-
-    // Print the current number
-    process.stdout.write(`${currentColumn} `);
-
-    // Add a newline after each integer greater than 5
-    if (currentColumn > 5) {
-        console.log();
-    }
-
-    // Move to the next column
-    if (currentColumn === currentRow || currentColumn === 1) {
-        // Start a new row
-        printPatternRecursively(num, currentRow + 1, 1);
-    } else {
-        // Continue the current row
-        printPatternRecursively(num, currentRow, currentColumn + 1);
-    }
+// Recursive function to calculate the nth Tribonacci number
+function tribonacci(num, first, second, third) {
+    if (num === 0) return first
+    if (num === 1) return second
+    if (num === 2) return third
+    return tribonacci(num - 1, second, third, first + second + third)
 }
 
-// Function to print the pattern for a given positive integer n
-function printPattern(num: number): void {
-    if (num < 1) {
-        console.log("Error: Input must be a positive integer greater than or equal to 1.");
-        return;
+// Function to print the first num Tribonacci numbers
+function printTribonacci(num) {
+    for (let counter = 0; counter < num; counter++) {
+        process.stdout.write(tribonacci(counter, 0, 1, 1) + " ")
     }
-
-    // Print the pattern recursively
-    printPatternRecursively(num);
+    console.log()
 }
 
-// Example usage:
 // Function to get valid user input
 function getInput(promptText: string): number {
     const prompt = createPrompt(promptText)
@@ -53,6 +34,6 @@ function getInput(promptText: string): number {
     return value
 }
 
-// Prompting the user for the sides of the triangle
-const userInput = getInput("Enter a number: ")
-printPattern(userInput);
+    const userInput = getInput("Enter a number: ")
+    printTribonacci(userInput)
+

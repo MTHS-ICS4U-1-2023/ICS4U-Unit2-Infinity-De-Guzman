@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^5.0.5",
-    "bun-promptx": "^0.2.0"
+    "@types/node": "^20.14.2",
+    "bun-promptx": "^0.2.0",
+    "save-dev": "^0.0.1-security"
   }
 }
