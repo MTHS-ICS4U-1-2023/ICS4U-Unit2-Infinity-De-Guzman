@@ -60,19 +60,27 @@ public final class TribonacciRecursive {
     }
 
     /**
-     * Function to get valid user input.
+     * Gets an integer input from the user.
      *
-     * @param promptText The text to prompt the user.
-     * @return The valid user input.
+     * @param scanner    The scanner to read input from.
+     * @param promptText The text to prompt the user with.
+     * @return The integer input from the user.
      */
-    public static int getInput(String promptText) {
-        final Scanner scanner = new Scanner(System.in);
-        System.out.print(promptText);
-        final int value = scanner.nextInt();
-        if (value < 0) {
-            System.out.println("Invalid input.");
-            System.exit(1);
-        }
+    public static int getInput(Scanner scanner, String promptText) {
+        int value = -1;
+        do {
+            System.out.print(promptText);
+            if (scanner.hasNextInt()) {
+                value = scanner.nextInt();
+                if (value < 0) {
+                    System.out.println("Please enter a non-negative number.");
+                    value = -1;
+                }
+            } else {
+                System.out.println("Please enter a valid number.");
+                scanner.next();
+            }
+        } while (value < 0);
         return value;
     }
 
@@ -82,8 +90,9 @@ public final class TribonacciRecursive {
      * @param args The command-line arguments.
      */
     public static void main(String[] args) {
+        final Scanner scanner = new Scanner(System.in);
         // Prompting the user for the number of Tribonacci numbers to print
-        final int userInput = getInput("Enter a number: ");
+        final int userInput = getInput(scanner, "Enter a number: ");
         printTribonacci(userInput);
     }
 }
