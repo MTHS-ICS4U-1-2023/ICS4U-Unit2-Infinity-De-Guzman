@@ -1,5 +1,5 @@
 /*
-* This is the standard truck class.
+* This program is the standard truck class.
 *
 * @author  Infinity de Guzman
 * @version 1.0
