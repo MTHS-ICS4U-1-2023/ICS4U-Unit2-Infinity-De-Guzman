@@ -1,0 +1,17 @@
+{
+  "name": "assignment-4",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.0.5",
+    "@types/node": "^20.14.2",
+    "bun-promptx": "^0.2.0",
+    "save-dev": "^0.0.1-security"
+  }
+}
